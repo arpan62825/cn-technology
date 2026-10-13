@@ -1,0 +1,1523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="C N TECHNOLOGIES Kolkata - IT service, Seagate & Otek authorised service partner, laptop and computer repair, motherboard and SMPS repair, RMA support."
+    />
+    <title>C N TECHNOLOGIES | IT Service & Support | Kolkata</title>
+
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================================
+        C N TECHNOLOGIES — Main Stylesheet
+        Color scheme: Green #233120 + Red #8D0107 (brand colors)
+         =================================================== */
+
+      /* ---------- VARIABLES ---------- */
+      :root {
+        --green: #233120;
+        --green-light: #2e4029;
+        --green-bg: #e8ede7;
+        --red: #8d0107;
+        --red-dark: #6a0105;
+        --red-bg: #f5e6e7;
+        --d: #1a1a2e;
+        --t: #2d3748;
+        --m: #5a6577;
+        --bg: #fafbfc;
+        --line: #e2e8f0;
+        --white: #ffffff;
+      }
+
+      /* ---------- RESET ---------- */
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+        color: var(--t);
+        line-height: 1.6;
+        background: var(--bg);
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img,
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* ---------- LAYOUT ---------- */
+      .wrap {
+        width: min(1160px, 92%);
+        margin: auto;
+      }
+
+      /* ===== TOP BAR ===== */
+      .top {
+        background: var(--green);
+        color: #dce5da;
+        padding: 8px 0;
+        font-size: 13px;
+      }
+      .top .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .top a {
+        color: #dce5da;
+        transition: color 0.2s;
+      }
+      .top a:hover {
+        color: #fff;
+      }
+
+      /* ===== HEADER ===== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--white);
+        border-bottom: 2px solid var(--green);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.3s;
+      }
+      header.scrolled {
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      }
+      .nav {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* Logo */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--d);
+        transition: transform 0.3s;
+      }
+      .logo:hover {
+        transform: scale(1.02);
+      }
+      .logo-svg {
+        height: 46px;
+        width: auto;
+        display: block;
+      }
+      .logo-text-group {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .logo-brand {
+        font-size: 20px;
+        letter-spacing: -0.5px;
+      }
+      .logo-c {
+        color: #243120;
+      }
+      .logo-n {
+        color: #243120;
+      }
+      .logo-tech {
+        color: #870303;
+        font-weight: 900;
+        margin-left: 2px;
+      }
+      .logo-sub {
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: var(--m);
+        margin-top: 3px;
+      }
+
+      /* Nav links */
+      nav {
+        display: flex;
+        gap: 17px;
+        align-items: center;
+      }
+      nav a {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--t);
+        position: relative;
+        transition: color 0.25s;
+      }
+      nav a:not(.navbtn)::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--green);
+        transition: width 0.3s ease;
+      }
+      nav a:not(.navbtn):hover::after {
+        width: 100%;
+      }
+      nav a:hover {
+        color: var(--green);
+      }
+      .navbtn {
+        background: var(--green);
+        color: white !important;
+        padding: 10px 18px;
+        border-radius: 7px;
+        transition:
+          background 0.25s,
+          transform 0.2s,
+          box-shadow 0.25s;
+      }
+      .navbtn:hover {
+        background: var(--green-light);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(35, 49, 32, 0.45);
+      }
+      .navbtn::after {
+        display: none !important;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        color: #fff;
+        background: linear-gradient(
+          135deg,
+          #131d12 0%,
+          #233120 40%,
+          #2e4029 70%,
+          #233120 100%
+        );
+        padding: 90px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 24px 24px;
+        opacity: 0.25;
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        width: 220px;
+        height: 130px;
+        background: linear-gradient(225deg, var(--red) 50%, transparent 50%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 1;
+      }
+      .tag {
+        display: inline-block;
+        padding: 7px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        backdrop-filter: blur(4px);
+      }
+      .hero h1 {
+        font-size: clamp(38px, 5.5vw, 60px);
+        line-height: 1.1;
+        max-width: 820px;
+        margin: 18px 0;
+        font-weight: 900;
+      }
+      .hero p {
+        max-width: 720px;
+        font-size: 18px;
+        color: #c8d5c6;
+      }
+
+      /* ===== BUTTONS ===== */
+      .buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 26px;
+      }
+      .btn {
+        padding: 13px 20px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.5s,
+          height 0.5s;
+      }
+      .btn:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+      .white {
+        background: var(--white);
+        color: var(--green);
+      }
+      .white:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+      .red-btn {
+        background: var(--red);
+        color: #fff;
+      }
+      .red-btn:hover {
+        background: var(--red-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(141, 1, 7, 0.4);
+      }
+      .ghost {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+      }
+      .ghost:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.7);
+        transform: translateY(-2px);
+      }
+
+      .red-divider {
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--green),
+          var(--red),
+          var(--green)
+        );
+      }
+
+      /* ===== SECTIONS ===== */
+      section {
+        padding: 78px 0;
+        position: relative;
+      }
+      .eyebrow {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--green);
+      }
+      h2 {
+        font-size: 38px;
+        line-height: 1.15;
+        margin: 8px 0 12px;
+        color: var(--d);
+        font-weight: 800;
+      }
+      .lead {
+        color: var(--m);
+        font-size: 16px;
+        max-width: 760px;
+      }
+      .head {
+        margin-bottom: 34px;
+      }
+
+      /* ===== GRID & CARDS ===== */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--white);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        transition:
+          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          box-shadow 0.35s ease,
+          border-color 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        border-color: var(--green);
+      }
+      .card .ico {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        background: var(--green-bg);
+        color: var(--green);
+        font-weight: 800;
+        font-size: 14px;
+        transition:
+          transform 0.3s,
+          background 0.3s;
+      }
+      .card:hover .ico {
+        transform: scale(1.1) rotate(-5deg);
+        background: var(--green);
+        color: #fff;
+      }
+      .card h3 {
+        margin: 14px 0 8px;
+        color: var(--d);
+        font-weight: 700;
+      }
+      .card p {
+        margin: 0;
+        color: var(--m);
+        font-size: 14px;
+      }
+
+      /* ===== SPLIT LAYOUT ===== */
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 55px;
+        align-items: center;
+      }
+      .panel {
+        background: linear-gradient(135deg, var(--green-bg), var(--white));
+        border: 1px solid #b8c6b6;
+        padding: 30px;
+        border-radius: 17px;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .panel:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(35, 49, 32, 0.15);
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+      }
+      .list li {
+        padding: 8px 0 8px 25px;
+        color: var(--m);
+        position: relative;
+      }
+      .list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-weight: 800;
+      }
+
+      /* ===== DARK SECTIONS ===== */
+      .dark {
+        background: var(--d);
+        color: #fff;
+      }
+      .dark h2,
+      .dark h3 {
+        color: #fff;
+      }
+      .dark .eyebrow {
+        color: #7cb882;
+      }
+      .dark .lead,
+      .dark .card p,
+      .dark .list li {
+        color: #b8c9d6;
+      }
+      .dark .card {
+        background: #242445;
+        border-color: #3a3a5c;
+      }
+      .dark .card:hover {
+        background: #2d2d52;
+        border-color: #7cb882;
+      }
+      .dark .card .ico {
+        background: #283a26;
+        color: #7cb882;
+      }
+      .dark .card:hover .ico {
+        background: #7cb882;
+        color: #242445;
+      }
+      .dark .list li::before {
+        color: #7cb882;
+      }
+
+      /* ===== GREEN SECTION ===== */
+      .green-section {
+        background: var(--green);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .green-section .wrap {
+        position: relative;
+        z-index: 1;
+      }
+      .green-section h2 {
+        color: #fff;
+      }
+      .green-section .eyebrow {
+        color: #a5cda8;
+      }
+      .green-section .lead {
+        color: #c8d5c6;
+      }
+      .green-section .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+      }
+      .green-section .card:hover {
+        background: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+      .green-section .card h3 {
+        color: #fff;
+      }
+      .green-section .card p {
+        color: #c8d5c6;
+      }
+      .green-section .card .ico {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      .green-section .card:hover .ico {
+        background: rgba(255, 255, 255, 0.35);
+      }
+
+      /* ===== AUTHORISED PARTNERS ===== */
+      .partners {
+        background: var(--white);
+        padding: 78px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .partners::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 150px;
+        height: 90px;
+        background: linear-gradient(135deg, var(--red) 50%, transparent 50%);
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+      }
+      .partner-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .partner-card {
+        padding: 40px 35px;
+        border-radius: 16px;
+        border: 2px solid var(--line);
+        background: var(--white);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          box-shadow 0.35s ease,
+          border-color 0.3s;
+      }
+      .partner-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        border-color: var(--green);
+      }
+      .partner-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--green), var(--red));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+      .partner-card:hover::after {
+        transform: scaleX(1);
+      }
+      .partner-logo-wrap {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .partner-logo-svg {
+        max-height: 55px;
+        width: auto;
+        max-width: 220px;
+        transition: transform 0.3s;
+      }
+      .partner-card:hover .partner-logo-svg {
+        transform: scale(1.08);
+      }
+      .partner-card h3 {
+        color: var(--d);
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      .auth-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background: var(--red);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        margin-top: 10px;
+        transition:
+          background 0.3s,
+          transform 0.3s;
+      }
+      .partner-card:hover .auth-badge {
+        background: var(--red-dark);
+        transform: scale(1.05);
+      }
+      .partner-card p {
+        color: var(--m);
+        font-size: 14px;
+        margin: 12px 0 0;
+      }
+
+      /* ===== CONTACT ===== */
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      .box {
+        padding: 28px;
+        border-radius: 14px;
+        background: var(--white);
+        color: var(--t);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+      .box strong {
+        display: block;
+        color: var(--d);
+        margin-top: 12px;
+      }
+      .dark .box {
+        background: #242445;
+        color: #d4dee8;
+      }
+      .dark .box:hover {
+        background: #2d2d52;
+      }
+      .dark .box strong {
+        color: #fff;
+      }
+      .dark .box a {
+        color: #7cb882;
+        transition: color 0.2s;
+      }
+      .dark .box a:hover {
+        color: #a5cda8;
+      }
+
+      .contact-3col {
+        grid-template-columns: 1fr 1.2fr 1fr;
+      }
+
+      .map-box {
+        padding: 20px;
+      }
+      .map-box h3 {
+        margin: 0 0 12px;
+      }
+      .map-container {
+        width: 100%;
+        height: 260px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid #3a3a5c;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .map-container:hover {
+        border-color: #7cb882;
+        box-shadow: 0 0 20px rgba(124, 184, 130, 0.25);
+      }
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .map-link {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #7cb882 !important;
+        transition:
+          color 0.2s,
+          transform 0.2s;
+      }
+      .map-link:hover {
+        color: #a5cda8 !important;
+        transform: translateX(4px);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: #141e13;
+        color: #8a9e88;
+        padding: 28px 0;
+        font-size: 13px;
+        position: relative;
+        overflow: hidden;
+      }
+      footer::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 120px;
+        height: 60px;
+        background: linear-gradient(225deg, var(--red) 50%, transparent 50%);
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+      footer a {
+        color: #7cb882;
+        transition: color 0.2s;
+      }
+      footer a:hover {
+        color: #a5cda8;
+      }
+
+      /* ===== ANIMATIONS ===== */
+      .anim {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .anim-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition:
+          opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .anim-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition:
+          opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .anim-scale {
+        opacity: 0;
+        transform: scale(0.85);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .anim-scale.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .stagger-1 {
+        transition-delay: 0.1s;
+      }
+      .stagger-2 {
+        transition-delay: 0.2s;
+      }
+      .stagger-3 {
+        transition-delay: 0.3s;
+      }
+      .stagger-4 {
+        transition-delay: 0.4s;
+      }
+
+      .hero-anim-tag {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: heroFadeIn 0.6s 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      .hero-anim-h1 {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: heroFadeIn 0.7s 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      .hero-anim-p {
+        opacity: 0;
+        transform: translateY(25px);
+        animation: heroFadeIn 0.7s 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      .hero-anim-btns {
+        opacity: 0;
+        transform: translateY(25px);
+        animation: heroFadeIn 0.7s 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      @keyframes heroFadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .auth-badge {
+        background-size: 200% 100%;
+        background-image: linear-gradient(
+          110deg,
+          var(--red) 0%,
+          var(--red) 40%,
+          #b5333a 50%,
+          var(--red) 60%,
+          var(--red) 100%
+        );
+        animation: badgeShimmer 3s ease-in-out infinite;
+      }
+      @keyframes badgeShimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      /* ===== MOBILE MENU ===== */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 101;
+      }
+      .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        background: var(--d);
+        margin: 5px 0;
+        border-radius: 2px;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+
+      /* ===== RESPONSIVE MEDIA QUERIES ===== */
+      @media (max-width: 900px) {
+        .menu-toggle {
+          display: block;
+        }
+        nav {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 280px;
+          height: 100vh;
+          background: var(--white);
+          flex-direction: column;
+          padding: 90px 30px 30px;
+          gap: 20px;
+          box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+          transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+          z-index: 99;
+        }
+        nav.open {
+          right: 0;
+        }
+        nav a {
+          font-size: 16px;
+        }
+        nav a:not(.navbtn)::after {
+          bottom: -2px;
+        }
+        .grid,
+        .partner-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .split,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+        .contact-3col {
+          grid-template-columns: 1fr 1fr;
+        }
+        .contact-3col .map-box {
+          grid-column: 1 / -1;
+        }
+        .map-container {
+          height: 280px;
+        }
+      }
+      @media (max-width: 580px) {
+        .grid,
+        .partner-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 65px 0;
+        }
+        section,
+        .partners {
+          padding: 60px 0;
+        }
+        .hero h1 {
+          font-size: 34px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+        .contact-3col {
+          grid-template-columns: 1fr;
+        }
+        .contact-3col .map-box {
+          grid-column: auto;
+        }
+        .map-container {
+          height: 220px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        .anim,
+        .anim-left,
+        .anim-right,
+        .anim-scale {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <div class="top">
+      <div class="wrap">
+        <span
+          >📍 Kolkata • Brand Support | Service | Computer Hardware | IT
+          Solutions</span
+        >
+        <span>
+          📞 <a href="tel:03331714780">033-31714780</a> |
+          <a href="tel:7980014066">7980014066</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="main-header">
+      <div class="wrap nav">
+        <a class="logo" href="#home" aria-label="C N TECHNOLOGIES Home">
+          <!-- INLINE SVG: CN TECHNOLOGIES BRAND LOGO -->
+          <!-- <img
+            src="logo.png"
+            alt="C N TECHNOLOGIES logo"
+            aria-label="C N TECHNOLOGIES"
+            width="65"
+            height="65"
+          /> -->
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Dark Green 'C' Shape[cite: 1] -->
+            <path
+              d="M 270 180
+                  L 360 180
+                  A 170 170 0 1 0 360 340
+                  L 270 340
+                  A 100 100 0 1 1 270 180 Z"
+              fill="#253224"
+            />
+
+            <!-- Deep Red 'N' Shape[cite: 1] -->
+            <polygon
+              points="280,210
+                        330,210
+                        410,282
+                        410,160
+                        460,110
+                        460,467
+                        330,350
+                        280,350"
+              fill="#9E1118"
+            />
+          </svg>
+          <div class="logo-text-group">
+            <div class="logo-brand">
+              <span class="logo-c">C</span> <span class="logo-n">N</span>
+              <span class="logo-tech">TECHNOLOGIES</span>
+            </div>
+            <div class="logo-sub">IT SERVICE &amp; BRAND SUPPORT</div>
+          </div>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="navMenu">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#partners">Partners</a>
+          <a href="#seagate">Seagate Service</a>
+          <a href="#computer">Repair</a>
+          <a href="#motherboard">Motherboard</a>
+          <a href="#rma">RMA</a>
+          <a class="navbtn" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap">
+        <span class="tag hero-anim-tag"
+          >BRAND SUPPORT • SERVICE • COMPUTER HARDWARE • IT SOLUTIONS</span
+        >
+        <h1 class="hero-anim-h1">
+          Professional IT Service &amp; Support in Kolkata
+        </h1>
+        <p class="hero-anim-p">
+          C N TECHNOLOGIES provides professional service assistance for Seagate
+          and Otekworld products, computers, laptops and IT hardware, with a
+          focus on diagnostics, repair and warranty/RMA-related support.
+        </p>
+        <div class="buttons hero-anim-btns">
+          <a class="btn white" href="#contact">Request Service</a>
+          <a class="btn red-btn" href="tel:7980014066">📞 Call 7980014066</a>
+          <a class="btn ghost" href="#partners">Our Partners</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="red-divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap split">
+        <div class="anim-left">
+          <span class="eyebrow">About Us</span>
+          <h2>Experience-led service support for IT needs.</h2>
+          <p class="lead">
+            C N TECHNOLOGIES is a Kolkata-based IT service and support
+            organization focused on diagnostics, repair assistance, customer
+            coordination and warranty/RMA-related support. We are authorised
+            service partners of Seagate and Otekworld.
+          </p>
+          <ul class="list">
+            <li>3A Bow Street, 2nd Floor, near Central Metro, Kolkata</li>
+            <li>Authorised Service Partner – Seagate &amp; Otekworld</li>
+            <li>Technical service and troubleshooting support</li>
+            <li>Customer and business service coordination</li>
+            <li>Professional communication and service follow-up</li>
+          </ul>
+        </div>
+        <div class="panel anim-right">
+          <span class="eyebrow">Our Focus</span>
+          <h3>One service desk for multiple IT requirements.</h3>
+          <p class="lead">
+            From storage devices and laptops to desktop hardware, motherboard
+            and SMPS troubleshooting, we help identify issues and coordinate the
+            appropriate service path.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHORISED PARTNERS -->
+    <section class="partners" id="partners">
+      <div class="wrap">
+        <div class="head anim" style="text-align: center">
+          <span class="eyebrow">Authorised Service Partners</span>
+          <h2>Trusted brand partnerships</h2>
+          <p class="lead" style="margin: 0 auto">
+            C N TECHNOLOGIES is an authorised service centre for the following
+            brands, providing official diagnostics, warranty and repair support.
+          </p>
+        </div>
+        <div class="partner-grid">
+          <!-- SEAGATE CARD -->
+          <div class="partner-card anim stagger-1">
+            <div class="partner-logo-wrap">
+              <!-- Seagate logo image sourced from Wikimedia Commons -->
+              <img
+                class="partner-logo-svg"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Seagate_logo.svg"
+                alt="Seagate logo"
+                style="
+                  width: 220px;
+                  height: auto;
+                  max-height: 55px;
+                  object-fit: contain;
+                "
+              />
+            </div>
+            <h3>Seagate</h3>
+            <span class="auth-badge">Authorised Service Centre</span>
+            <p>
+              Official diagnostics, warranty/RMA coordination, and replacement
+              support for Seagate storage products — hard drives, SSDs, and
+              external storage devices.
+            </p>
+          </div>
+
+          <!-- OTEK CARD -->
+          <div class="partner-card anim stagger-2">
+            <div class="partner-logo-wrap">
+              <!-- INLINE SVG: OTEK LOGO -->
+              <svg
+                class="partner-logo-svg"
+                viewBox="0 0 320 110"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <!-- Charcoal 'Otek' Text -->
+                  <text
+                    x="10"
+                    y="70"
+                    font-family="'Inter', sans-serif"
+                    font-weight="800"
+                    font-size="64"
+                    fill="#333333"
+                    letter-spacing="-2"
+                  >
+                    Otek
+                  </text>
+                  <!-- Red Chevron Arrows Design -->
+                  <path
+                    d="M 172 45 L 188 62 L 172 79 L 182 79 L 198 62 L 182 45 Z"
+                    fill="#eb4e24"
+                  />
+                  <path
+                    d="M 192 45 L 208 62 L 192 79 L 202 79 L 218 62 L 202 45 Z"
+                    fill="#eb4e24"
+                  />
+                  <!-- Subtitle Text -->
+                  <text
+                    x="38"
+                    y="98"
+                    font-family="'Inter', sans-serif"
+                    font-weight="700"
+                    font-size="16"
+                    fill="#222222"
+                    letter-spacing="0.2"
+                  >
+                    Tech Forward Always
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <h3>Otekworld</h3>
+            <span class="auth-badge">Authorised Service Partner</span>
+            <p>
+              Authorised service and support for Otekworld consumer electronics
+              — smart peripherals, projectors, and home appliance products.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="red-divider"></div>
+
+    <!-- SEAGATE SERVICE -->
+    <section class="green-section" id="seagate">
+      <div class="wrap">
+        <div class="head anim">
+          <span class="eyebrow">Seagate Service</span>
+          <h2>Seagate-focused service &amp; support</h2>
+          <p class="lead">
+            Service assistance for Seagate storage products, including
+            diagnostics, warranty/RMA-related coordination and customer support.
+          </p>
+        </div>
+        <div class="grid">
+          <div class="card anim stagger-1">
+            <div class="ico">01</div>
+            <h3>Product Diagnostics</h3>
+            <p>
+              Initial inspection and troubleshooting support for eligible
+              Seagate storage devices.
+            </p>
+          </div>
+          <div class="card anim stagger-2">
+            <div class="ico">02</div>
+            <h3>Warranty / RMA</h3>
+            <p>
+              Support with warranty-related service coordination and RMA process
+              requirements.
+            </p>
+          </div>
+          <div class="card anim stagger-3">
+            <div class="ico">03</div>
+            <h3>Customer Assistance</h3>
+            <p>
+              Service-status communication and coordination for customers and
+              business partners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPUTER / LAPTOP REPAIR -->
+    <section id="computer">
+      <div class="wrap">
+        <div class="head anim">
+          <span class="eyebrow">Computer &amp; Laptop Repair</span>
+          <h2>Computer, laptop and IT hardware service</h2>
+          <p class="lead">
+            Troubleshooting and repair assistance for common hardware and system
+            issues.
+          </p>
+        </div>
+        <div class="grid">
+          <div class="card anim stagger-1">
+            <div class="ico">PC</div>
+            <h3>Desktop Repair</h3>
+            <p>
+              Hardware diagnostics, component replacement, boot and performance
+              troubleshooting.
+            </p>
+          </div>
+          <div class="card anim stagger-2">
+            <div class="ico">LT</div>
+            <h3>Laptop Repair</h3>
+            <p>
+              Charging/power, storage, memory, display and other laptop repair
+              support.
+            </p>
+          </div>
+          <div class="card anim stagger-3">
+            <div class="ico">OS</div>
+            <h3>OS &amp; Software</h3>
+            <p>
+              Operating-system installation, configuration, drivers and general
+              software support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOTHERBOARD & SMPS -->
+    <section class="dark" id="motherboard">
+      <div class="wrap">
+        <div class="head anim">
+          <span class="eyebrow">Board-Level Support</span>
+          <h2>Motherboard &amp; SMPS Repair</h2>
+          <p class="lead">
+            Diagnostic and repair support for desktop and compatible IT hardware
+            power and board-level faults.
+          </p>
+        </div>
+        <div class="grid">
+          <div class="card anim stagger-1">
+            <div class="ico">MB</div>
+            <h3>Motherboard Diagnostics</h3>
+            <p>
+              No-power, boot failure, component and circuit-level
+              troubleshooting support.
+            </p>
+          </div>
+          <div class="card anim stagger-2">
+            <div class="ico">PS</div>
+            <h3>SMPS Repair</h3>
+            <p>
+              Power-supply inspection and repair assessment for compatible
+              systems.
+            </p>
+          </div>
+          <div class="card anim stagger-3">
+            <div class="ico">HW</div>
+            <h3>Hardware Troubleshooting</h3>
+            <p>
+              Fault isolation and service recommendations before replacement or
+              repair.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RMA SUPPORT -->
+    <section id="rma">
+      <div class="wrap split">
+        <div class="anim-left">
+          <span class="eyebrow">RMA Support</span>
+          <h2>Warranty &amp; RMA coordination</h2>
+          <p class="lead">
+            Assistance with documentation, service coordination and RMA-related
+            communication where applicable.
+          </p>
+        </div>
+        <div class="panel anim-right">
+          <h3>Typical support flow</h3>
+          <ul class="list">
+            <li>Product and issue details collection</li>
+            <li>Warranty/service eligibility coordination</li>
+            <li>Diagnostic information and service documentation</li>
+            <li>RMA/service-status follow-up</li>
+            <li>Customer communication and closure coordination</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="red-divider"></div>
+
+    <!-- CONTACT -->
+    <section class="dark" id="contact">
+      <div class="wrap">
+        <div class="head anim">
+          <span class="eyebrow">Contact</span>
+          <h2>Visit or contact C N TECHNOLOGIES</h2>
+          <p class="lead">
+            For service enquiries, repair requirements, RMA assistance or
+            business/service-partner enquiries.
+          </p>
+        </div>
+        <div class="contact contact-3col">
+          <div class="box anim stagger-1">
+            <h3>Office</h3>
+            <strong>Address</strong>
+            3A, Bow Street, 2nd Floor, Room - 2L<br />
+            Near Central Metro Station, Gate No. 2<br />
+            Opposite Central Plaza Building<br />
+            Kolkata - 700012
+            <strong>Phone</strong>
+            <a href="tel:03331714780">033-31714780</a> |
+            <a href="tel:7980014066">7980014066</a>
+            <strong>Email</strong>
+            <a href="mailto:cntech078@gmail.com">cntech078@gmail.com</a>
+          </div>
+          <div class="box map-box anim-scale stagger-2">
+            <h3>Our Location</h3>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.1837028198753!2d88.35824887602325!3d22.57218683300588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a514d334dd%3A0xb314782b5ea9ba8!2s3A%2C%20Bow%20St%2C%20Bow%20Bazar%2C%20Kolkata%2C%20West%20Bengal%20700012!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="C N Technologies Office Location — 3A Bow Street, Kolkata 700012"
+              ></iframe>
+            </div>
+            <a
+              class="map-link"
+              href="https://www.google.com/maps/search/3A+Bow+Street,+Kolkata+700012"
+              target="_blank"
+              rel="noopener"
+              >Open in Google Maps ↗</a
+            >
+          </div>
+          <div class="box anim stagger-3">
+            <h3>Service Enquiry</h3>
+            <p>
+              Tell us your product, model and issue. Keep invoice/warranty
+              details available where applicable.
+            </p>
+            <div class="buttons">
+              <a
+                class="btn red-btn"
+                href="https://wa.me/917980014066"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp Us</a
+              >
+              <a class="btn ghost" href="mailto:cntech078@gmail.com"
+                >Email Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap">
+        <span>&copy; 2026 C N TECHNOLOGIES. All rights reserved.</span>
+        <span>Authorised Service Partner – Seagate &amp; Otekworld</span>
+        <span>Brand Support • Service • Computer Hardware • IT Solutions</span>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // --- 1. Mobile Menu Toggle ---
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", function () {
+            menuToggle.classList.toggle("active");
+            navMenu.classList.toggle("open");
+          });
+
+          // Close menu when clicking links on mobile
+          navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              menuToggle.classList.remove("active");
+              navMenu.classList.remove("open");
+            });
+          });
+        }
+
+        // --- 2. Header Box Shadow on Scroll ---
+        const header = document.getElementById("main-header");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 20) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+
+        // --- 3. Scroll Intersection Observer for Animations ---
+        const animatedElements = document.querySelectorAll(
+          ".anim, .anim-left, .anim-right, .anim-scale",
+        );
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            function (entries, observerInstance) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  observerInstance.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              threshold: 0.12,
+              rootMargin: "0px 0px -40px 0px",
+            },
+          );
+
+          animatedElements.forEach(function (el) {
+            observer.observe(el);
+          });
+        } else {
+          // Fallback for browsers without IntersectionObserver
+          animatedElements.forEach(function (el) {
+            el.classList.add("visible");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
